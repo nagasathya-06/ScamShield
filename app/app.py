@@ -9,8 +9,10 @@ import os
 import time
 from pathlib import Path
 
-# Add project root to path
+# Add the application directory and project root to the import path.
+APP_DIR = Path(__file__).resolve().parent
 ROOT_DIR = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(APP_DIR))
 sys.path.insert(0, str(ROOT_DIR))
 
 import streamlit as st
@@ -26,13 +28,13 @@ from src.config import (
     PROCESSED_DATA_DIR,
     ARTIFACTS_DIR
 )
-from app.components import (
+from components import (
     get_custom_css,
     render_verdict_card,
     render_threat_item,
     render_highlighted_text
 )
-from app.sample_messages import SAMPLE_MESSAGES
+from sample_messages import SAMPLE_MESSAGES
 from data.custom_indian_corpus import obfuscate_text
 from src.explainability.naive_bayes_explainer import NaiveBayesWordExplainer
 from src.explainability.rule_explainer import diagnose_threats
