@@ -1,0 +1,263 @@
+{
+    "test_metrics": {
+        "Scratch Naive Bayes": {
+            "Accuracy": 0.9778554778554779,
+            "Precision": 0.9477611940298507,
+            "Scam Recall": 0.9136690647482014,
+            "Specificity": 0.9902642559109874,
+            "F1-Score": 0.9304029304029304,
+            "False Negatives (Missed Scams)": 12,
+            "False Positives (False Alarms)": 7,
+            "True Positives (Caught Scams)": 127,
+            "True Negatives (Correct Safe)": 712,
+            "ROC-AUC": 0.9897639607368348,
+            "Inference Latency (ms/msg)": 0.0
+        },
+        "Sklearn Naive Bayes": {
+            "Accuracy": 0.9778554778554779,
+            "Precision": 0.9477611940298507,
+            "Scam Recall": 0.9136690647482014,
+            "Specificity": 0.9902642559109874,
+            "F1-Score": 0.9304029304029304,
+            "False Negatives (Missed Scams)": 12,
+            "False Positives (False Alarms)": 7,
+            "True Positives (Caught Scams)": 127,
+            "True Negatives (Correct Safe)": 712,
+            "ROC-AUC": 0.9897639607368348,
+            "Inference Latency (ms/msg)": 0.001
+        },
+        "Scratch Logistic Regression": {
+            "Accuracy": 0.9871794871794872,
+            "Precision": 0.9848484848484849,
+            "Scam Recall": 0.935251798561151,
+            "Specificity": 0.9972183588317107,
+            "F1-Score": 0.959409594095941,
+            "False Negatives (Missed Scams)": 9,
+            "False Positives (False Alarms)": 2,
+            "True Positives (Caught Scams)": 130,
+            "True Negatives (Correct Safe)": 717,
+            "ROC-AUC": 0.9929358321409631,
+            "Inference Latency (ms/msg)": 0.001
+        },
+        "Sklearn Logistic Regression": {
+            "Accuracy": 0.9883449883449883,
+            "Precision": 0.9923664122137404,
+            "Scam Recall": 0.935251798561151,
+            "Specificity": 0.9986091794158554,
+            "F1-Score": 0.9629629629629629,
+            "False Negatives (Missed Scams)": 9,
+            "False Positives (False Alarms)": 1,
+            "True Positives (Caught Scams)": 130,
+            "True Negatives (Correct Safe)": 718,
+            "ROC-AUC": 0.997078276182948,
+            "Inference Latency (ms/msg)": 0.0
+        },
+        "k-Nearest Neighbours": {
+            "Accuracy": 0.9778554778554779,
+            "Precision": 0.9761904761904762,
+            "Scam Recall": 0.8848920863309353,
+            "Specificity": 0.9958275382475661,
+            "F1-Score": 0.9283018867924528,
+            "False Negatives (Missed Scams)": 16,
+            "False Positives (False Alarms)": 3,
+            "True Positives (Caught Scams)": 123,
+            "True Negatives (Correct Safe)": 716,
+            "ROC-AUC": 0.9761909526620707,
+            "Inference Latency (ms/msg)": 0.342
+        },
+        "Random Forest": {
+            "Accuracy": 0.9801864801864801,
+            "Precision": 0.9919354838709677,
+            "Scam Recall": 0.8848920863309353,
+            "Specificity": 0.9986091794158554,
+            "F1-Score": 0.935361216730038,
+            "False Negatives (Missed Scams)": 16,
+            "False Positives (False Alarms)": 1,
+            "True Positives (Caught Scams)": 123,
+            "True Negatives (Correct Safe)": 718,
+            "ROC-AUC": 0.9947168829609468,
+            "Inference Latency (ms/msg)": 0.067
+        },
+        "XGBoost": {
+            "Accuracy": 0.9848484848484849,
+            "Precision": 0.9846153846153847,
+            "Scam Recall": 0.920863309352518,
+            "Specificity": 0.9972183588317107,
+            "F1-Score": 0.9516728624535316,
+            "False Negatives (Missed Scams)": 11,
+            "False Positives (False Alarms)": 2,
+            "True Positives (Caught Scams)": 128,
+            "True Negatives (Correct Safe)": 717,
+            "ROC-AUC": 0.9966980518505919,
+            "Inference Latency (ms/msg)": 0.015
+        },
+        "Neural MLP": {
+            "Accuracy": 0.9848484848484849,
+            "Precision": 0.9701492537313433,
+            "Scam Recall": 0.935251798561151,
+            "Specificity": 0.9944367176634215,
+            "F1-Score": 0.9523809523809523,
+            "False Negatives (Missed Scams)": 9,
+            "False Positives (False Alarms)": 4,
+            "True Positives (Caught Scams)": 130,
+            "True Negatives (Correct Safe)": 715,
+            "ROC-AUC": 0.9888033940024615,
+            "Inference Latency (ms/msg)": 0.015
+        }
+    },
+    "scratch_vs_sklearn_validation": {
+        "nb_agreement_pct": 100.0,
+        "lr_agreement_pct": 99.65034965034964,
+        "scratch_lr_final_loss": 0.020246334436375298,
+        "scratch_lr_initial_loss": 0.6949568225360058
+    },
+    "overfitting_analysis": [
+        {
+            "model_name": "Scratch Naive Bayes",
+            "train_accuracy": 0.9835041239690078,
+            "val_accuracy": 0.9848308051341891,
+            "train_f1": 0.9485179407176287,
+            "val_f1": 0.9523809523809523,
+            "train_recall": 0.9382716049382716,
+            "val_recall": 0.935251798561151,
+            "generalization_gap": -0.00386301166332359,
+            "diagnosis": "Optimal Generalization"
+        },
+        {
+            "model_name": "Sklearn Naive Bayes",
+            "train_accuracy": 0.9835041239690078,
+            "val_accuracy": 0.9848308051341891,
+            "train_f1": 0.9485179407176287,
+            "val_f1": 0.9523809523809523,
+            "train_recall": 0.9382716049382716,
+            "val_recall": 0.935251798561151,
+            "generalization_gap": -0.00386301166332359,
+            "diagnosis": "Optimal Generalization"
+        },
+        {
+            "model_name": "Scratch Logistic Regression",
+            "train_accuracy": 1.0,
+            "val_accuracy": 0.9871645274212368,
+            "train_f1": 1.0,
+            "val_f1": 0.9591078066914498,
+            "train_recall": 1.0,
+            "val_recall": 0.9280575539568345,
+            "generalization_gap": 0.040892193308550207,
+            "diagnosis": "Optimal Generalization"
+        },
+        {
+            "model_name": "Sklearn Logistic Regression",
+            "train_accuracy": 0.9962509372656836,
+            "val_accuracy": 0.9906651108518086,
+            "train_f1": 0.988399071925754,
+            "val_f1": 0.9708029197080292,
+            "train_recall": 0.9861111111111112,
+            "val_recall": 0.9568345323741008,
+            "generalization_gap": 0.017596152217724814,
+            "diagnosis": "Optimal Generalization"
+        },
+        {
+            "model_name": "k-Nearest Neighbours",
+            "train_accuracy": 0.9892526868282929,
+            "val_accuracy": 0.9871645274212368,
+            "train_f1": 0.9661150512214342,
+            "val_f1": 0.9591078066914498,
+            "train_recall": 0.9459876543209876,
+            "val_recall": 0.9280575539568345,
+            "generalization_gap": 0.007007244529984358,
+            "diagnosis": "Optimal Generalization"
+        },
+        {
+            "model_name": "Random Forest",
+            "train_accuracy": 1.0,
+            "val_accuracy": 0.9871645274212368,
+            "train_f1": 1.0,
+            "val_f1": 0.9591078066914498,
+            "train_recall": 1.0,
+            "val_recall": 0.9280575539568345,
+            "generalization_gap": 0.040892193308550207,
+            "diagnosis": "Optimal Generalization"
+        },
+        {
+            "model_name": "XGBoost",
+            "train_accuracy": 1.0,
+            "val_accuracy": 0.9929988331388565,
+            "train_f1": 1.0,
+            "val_f1": 0.9785714285714285,
+            "train_recall": 1.0,
+            "val_recall": 0.9856115107913669,
+            "generalization_gap": 0.021428571428571463,
+            "diagnosis": "Optimal Generalization"
+        },
+        {
+            "model_name": "Neural MLP",
+            "train_accuracy": 0.9977505623594102,
+            "val_accuracy": 0.9883313885647608,
+            "train_f1": 0.9930178432893716,
+            "val_f1": 0.9632352941176471,
+            "train_recall": 0.9876543209876543,
+            "val_recall": 0.9424460431654677,
+            "generalization_gap": 0.029782549171724515,
+            "diagnosis": "Optimal Generalization"
+        }
+    ],
+    "robustness_analysis": [
+        {
+            "model_name": "Word-TF-IDF Only (Naive Bayes)",
+            "clean_scam_recall": 0.8489208633093526,
+            "obfuscated_scam_recall": 0.60431654676259,
+            "recall_drop": 0.24460431654676262,
+            "retention_rate_pct": 71.1864406779661
+        },
+        {
+            "model_name": "Hybrid (Scratch Naive Bayes)",
+            "clean_scam_recall": 0.9136690647482014,
+            "obfuscated_scam_recall": 0.8633093525179856,
+            "recall_drop": 0.05035971223021585,
+            "retention_rate_pct": 94.48818897637796,
+            "clean_missed_count": 12,
+            "obfuscated_missed_count": 19,
+            "total_test_samples": 139
+        },
+        {
+            "model_name": "Hybrid (Scratch Logistic Regression)",
+            "clean_scam_recall": 0.935251798561151,
+            "obfuscated_scam_recall": 0.8992805755395683,
+            "recall_drop": 0.03597122302158273,
+            "retention_rate_pct": 96.15384615384616,
+            "clean_missed_count": 9,
+            "obfuscated_missed_count": 14,
+            "total_test_samples": 139
+        },
+        {
+            "model_name": "Hybrid (Random Forest)",
+            "clean_scam_recall": 0.8848920863309353,
+            "obfuscated_scam_recall": 0.7194244604316546,
+            "recall_drop": 0.16546762589928066,
+            "retention_rate_pct": 81.30081300813006,
+            "clean_missed_count": 16,
+            "obfuscated_missed_count": 39,
+            "total_test_samples": 139
+        },
+        {
+            "model_name": "Hybrid (XGBoost)",
+            "clean_scam_recall": 0.920863309352518,
+            "obfuscated_scam_recall": 0.9928057553956835,
+            "recall_drop": -0.07194244604316546,
+            "retention_rate_pct": 107.8125,
+            "clean_missed_count": 11,
+            "obfuscated_missed_count": 1,
+            "total_test_samples": 139
+        },
+        {
+            "model_name": "Hybrid (Neural MLP)",
+            "clean_scam_recall": 0.935251798561151,
+            "obfuscated_scam_recall": 0.8848920863309353,
+            "recall_drop": 0.050359712230215736,
+            "retention_rate_pct": 94.61538461538463,
+            "clean_missed_count": 9,
+            "obfuscated_missed_count": 16,
+            "total_test_samples": 139
+        }
+    ]
+}
